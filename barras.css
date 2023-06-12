@@ -1,0 +1,110 @@
+/* Menú horizontal con transiciones */
+
+/* Formato general de cada item */
+
+.menu {
+  display: block;
+  position: relative;
+  height: 66px;
+  width: 106px;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Bordes superiores */
+.menu.si {
+  border-top:  rgb(108, 99, 12) 0.3em solid;
+}
+.menu.servicios {
+  border-top: rgb(150, 139, 40) 0.3em solid;
+}
+
+.menu.recursos {
+  border-top: rgb(150, 139, 40) 0.3em solid;
+}
+
+.menu.proyectos {
+  border-top: rgb(150, 139, 40) 0.3em solid;
+}
+
+.menu.contacto {
+  border-top:rgb(150, 139, 40) 0.3em solid;
+}
+.menu.no {
+  border-top: rgb(150, 139, 40) 0.3em solid;
+}
+
+
+/* Atributos y transición */
+
+.menu > span {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0%;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+}
+
+.menu:after, .menu > span > span {
+  display: block;
+  text-align: center;
+  border-radius: 0em;
+  padding: 2em 0 1.5em;
+}
+
+.menu:after {
+  content: attr(data-title);
+  width: 100%;
+  background: #000;
+  color: #fff; 
+}
+
+.menu > span > span {
+  width: 120px;
+  color: #fff;
+}
+.menu.si > span > span {
+  background: rgb(108, 99, 12);
+}
+.menu.servicios > span > span {
+  background: rgb(150, 139, 40);
+}
+
+.menu.proyectos > span > span {
+  background: rgb(150, 139, 40);
+}
+
+.menu.recursos > span > span {
+  background: rgb(150, 139, 40);
+}
+
+.menu.contacto > span > span {
+    background:rgb(150, 139, 40);
+}
+.menu.no > span > span {
+  background: rgb(150, 139, 40);
+}
+/* Lo que pasa con hover */
+
+.menu:hover > span {
+    height: 100%; 
+}
+
+/* Dando formato a lista */ 
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li a {
+  display: inline;
+  float: left;
+  text-decoration: none;
+  font-family: sans;
+}
